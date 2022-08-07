@@ -3,8 +3,13 @@
         <link rel="stylesheet" href="style.css" />
         <title>Chihuahua_words</title>
         <link rel="icon" href="https://raw.githubusercontent.com/IrisLiu-coder/chihuahua_words/ea238fa1c1b1cf462782261fb1bef7a9e24743f0/source/chihuahua_icon.ico" type="image/x-icon"/>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
     </head>
-    <body>
+    <body background="source/back_ground_01.jpg"  id="background">
         <div class="content">
             <h1 align="center">welcome</h1>
             <h3 align="center">Chihuahua words website</h3>
@@ -13,8 +18,24 @@
                 <a href="https://youtu.be/uGCZuv0CWoo"><img class="icon"src="https://cdn-icons-png.flaticon.com/512/890/890806.png"></a>
                 <a href="https://en.wikipedia.org/wiki/Chihuahua_(dog)"><img class="icon"src="https://cdn-icons-png.flaticon.com/512/837/837799.png"></a>
             </div>      
-            <a href="mailto:bennywow0413@gmail.com" ><img src="source/chihuahua.png" id="chiwawa" onclick="change()"></a>    
+            <img src="source/chihuahua.png" id="chiwawa" onclick="change()"></a>    
         </div>
-        <script></script>
+        <script>
+            var body = document.getElementById("background");
+            var n=1;
+            document.addEventListener("click", function(){
+                n++;
+                body.style.backgroundImage = 'url(source/back_ground_0'+(n%2+1)+'.jpg)';
+            });
+            function change(){
+                setTimeout('$("h1").hide("normal")',50);
+                setTimeout('$("h3").hide("normal")',50);
+                setTimeout('$("a").hide("normal")',50);
+                $.getJSON("https://raw.githubusercontent.com/IrisLiu-coder/english_words/main/level_0"+String(Meteorite[4].lv)+".json", function(data){
+                        document.getElementById("words05").style.cssText = 'font-size: 20px; color: white; position: absolute; top: '+sinT5+'px; left: '+cosT5+'px;';
+                        document.getElementById("words05").innerText=data?.[nuM5]?.["word"];
+                });  
+            }
+        </script>
     </body>
 </html>
