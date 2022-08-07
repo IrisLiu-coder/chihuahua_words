@@ -1,0 +1,16 @@
+body{
+    background-color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img.icon{
+    width: 50px;
+}
+.content{
+    background-color: rgb(255, 188, 87);
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
