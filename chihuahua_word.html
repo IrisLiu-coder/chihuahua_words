@@ -41,7 +41,7 @@
                 setTimeout('$("h1").hide("normal")',150);
                 setTimeout('$("h3").hide("normal")',150);
                 setTimeout('$(".imagesite").hide("normal")',150);
-                $.getJSON("https://raw.githubusercontent.com/IrisLiu-coder/chihuahua_words/main/source/chi-words.json", function(data){
+                $.getJSON("https://raw.githubusercontent.com/IrisLiu-coder/chihuahua_words/main/source/chi_words.json", function(data){
                     document.getElementById("transform").innerText=data?.[x]?.["transform"];
                     document.getElementById("spell").innerText=data?.[x]?.["Spell"];
                     document.getElementById("word").innerText=data?.[x]?.["Words"];
